@@ -1,0 +1,47 @@
+#
+#
+# Makefile for proj5
+# Author: bjr
+# Created: 04/2016
+# Last Update: -
+#
+# 
+
+SID= AC...
+TOKEN= b4...
+MY_NUM= +13053018428
+TWILIO_NUM= +16093035033
+
+NAME= fdre
+
+V= -v
+
+LIB= -lcrypto -lssl -lpthread -lcurl
+
+twilio: twilio.c
+	cc -o $@ $< ${LIB}
+
+test: twilio
+	./twilio ${V} -S ${SID} -T ${TOKEN} info
+	
+test-list:
+	./twilio ${V} -S ${SID} -T ${TOKEN} list
+
+test-send:
+	./twilio ${V} -S ${SID} -T ${TOKEN} -R ${TWILIO_NUM} send "${MY_NUM}:Hi everyone! From ${NAME}"
+	
+test-get:
+	./twilio ${V} -S ${SID} -T ${TOKEN} -R ${TWILIO_NUM} get 4
+
+regex-test: regex-test.c 
+	cc regex-test.c -o regex-test
+	./regex-test
+
+base64-test: base64-test.c
+	cc -o base64-test base64-test.c -lcrypto -lm -w
+	./base64-test
+
+clean:
+	-rm regex-test base64-test
+	-rm twilio
+

@@ -1,0 +1,35 @@
+class: csc424-162
+project: proj2
+user: francisco delger (frde) 
+
+grade: 4/5
+
+something realistic submitted:	1/1
+partial passes basic test:		1/1
+fully passes basic test (#):	1/1
+code review($):					1/1
+passes extended test (%):		1/1
+
+lateness:			(1)/(1)
+
+(#)
+- make test; no binaries submitted; 
+  exactly matches reference file
+  
+($)
+- code review includes using linked list to 
+  accomplish task, malloc, correct use of C,
+  and so on
+
+(%)
+- passes tests in Makefile.ext 
+
+make build:  1 point
+make test: 2 points
+make clean: 0 points
+POINTS EARNED:  3 points
+
+commit:
+Date Submitted: r232 | frde | 2016-02-26 12:47:34 -0500 (Fri, 26 Feb 2016) | 1 line
+
+comments:

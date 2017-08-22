@@ -1,0 +1,33 @@
+#
+#
+# Makefile to exercise Twilio
+# Author: bjr
+# Created: 04/2016
+# Last Update: 22/04/2016
+#
+#
+
+ACCT_SID= AC4e787f8a51b5ecaf00d23efff39a2517
+AUTH_TOK= e855b3ea165ecabd685776ad9df60ab3
+T_URL= https://api.twilio.com/2010-04-01/Accounts
+
+TWILIO_TO=  +17863267330
+TWILIO_FRM= +17866554480
+TWILIO_MSG= Hello-world!
+
+#V= -v
+
+list:
+	curl ${V} -iX GET '${T_URL}/${ACCT_SID}/Messages' -u '${ACCT_SID}:${AUTH_TOK}'
+
+sms-out:
+	curl ${V} -X POST '${T_URL}/${ACCT_SID}/Messages.json' \
+	--data-urlencode 'To=${TWILIO_TO}'  \
+	--data-urlencode 'From=${TWILIO_FRM}'  \
+	--data-urlencode 'Body=${TWILIO_MSG}' \
+	-u '${ACCT_SID}:${AUTH_TOK}'
+
+test:	twilio.c twilio.h
+	gcc twilio.c -o twilio -lcurl
+	 ./twilio -L -v -S ${ACCT_SID} -T ${AUTH_TOK} -R ${TWILIO_TO} 
+

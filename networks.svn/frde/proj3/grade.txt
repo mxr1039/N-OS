@@ -1,0 +1,54 @@
+class: csc424-162
+project: proj3
+user: francisco delger (frde)
+
+grade: 2/5
+
+something realistic submitted:	1/1
+partial passes basic test:		1/1
+fully passes basic test (#):	0/1
+passes extended test (%):		0/2
+
+
+lateness:			(0)/(1)
+
+
+(#)
+- make test; no binaries submitted; 
+  exactly matches reference file
+  
+($)
+- code review includes using linked list to 
+  accomplish task, malloc, correct use of C,
+  and so on
+
+(%)
+- passes extended tests: binary files, file sizes,
+  interoperability
+
+
+make build:  1 point
+make test: 1 points (test does not terminate)
+make clean: 0 points
+POINTS EARNED:  2 points
+
+
+commit:
+Date Submitted: r427 | frde | 2016-03-26 17:09:32 -0400 (Sat, 26 Mar 2016) | 1 line
+
+comments:
+  late forgiveness (up to 23 mar) (gave additional latness credit)
+  
+	[burt@shiloh proj3]$ make -f Makefile.ext test-ext-s
+	running the server on shiloh port 33031
+	cp ttftp testfiles/
+	cd testfiles ; ./ttftp -v 33031
+	got packet from 172.19.1.9, port 36624
+	file name is 0bytes.bin 
+	Opened the file 0bytes.bin 
+	opcode is 3 DATA, blocknumber is 1 
+	sent 516 bytes 
+	Either that was the last packet or the size of the first read wasnt 512 bytes 
+	Received ack packet! 
+	No timeout occured 
+	[burt@shiloh proj3]$ 

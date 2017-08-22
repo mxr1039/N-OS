@@ -1,0 +1,101 @@
+
+CSC424 Computer Networks and Security
+1 February 2016
+
+Grade: 10/10
+Late: 0
+
+Due: 8 Feb
+
+1) Read chapters 1 and 3 from Computer Networks, Peterson and Davie 5th ed.
+   (In the 3ird edition, chapters 1 and 4). 
+
+2) Chapter 1 questions, numbers for 5th ed (4th ed):
+   * 7 (9)
+   * 8 (10)
+   * 18 (20)
+   * 21 (23)
+   * 24 (26 numbers differ)
+   * 36 (38)
+
+3) Pick out 2 servers located in each of the 3 continents: Europe, North America and
+   South America. Use traceroute to find the packet path. Then use your internet 
+   sleuthing abilities to find the actual geographic path, including if possible the
+   location, down to the address, of the major switching hubs.
+   
+   Use these resources, among others:
+   * http://www.submarinecablemap.com/
+   * http://www.teliasoneraicmap.com/
+   * http://lg.telia.net/
+   * http://www.flrnet.org/?page_id=247
+  
+2)
+
+ - 7) What properties of postal addresses would be likely to be shared
+by a network addressing scheme? What differences might you
+expect to find? What properties of telephone numbering might
+be shared by a network addressing scheme?
+
+A possible similarity is that postal addresses are strong hierarchical,which is a scheme that network addresses may use, the difference is that postal ones have some redundant information to avoid errors and can be long and/of varied length, which network addresses cant do. Telephone numbers are similar in that they have a fixed length, an area code to act as a header, etc.
+
+-8) One property of addresses is that they are unique; if two nodes
+had the same address, it would be impossible to distinguish
+between them. What other properties might be useful for network
+addresses to have? Can you think of any situations in which
+network (or postal or telephone) addresses might not be unique?
+
+A property that I would underline is that they might have a distinguishable header (say a Class A vs a Class B address) that may help speed up the process in distinguishing and distributing, also the fact that they have fixed length helps the computer since it might not have to read all the numbers in the address in order to reroute.
+
+Telephone numbers of big companies usually have a unique toll free number, but anyone at the company can pick up, multiple phones ring in other words. We could say that all these phones have the same number.
+
+18. Calculate the effective bandwidth for the following cases. For
+(a) and (b) assume there is a steady supply of data to send; for
+(c) simply calculate the average over 12 hours.
+
+a) The effective bandwith is 100 because the sender can constantly send at that speed and we don't have to wait for acknowledgement packets whatsoever.
+b) 12000 bits have a 120 us delay because of the 100 speed, the 50 bit ack take 0.5 us per switch and there's no mention of a propagation delay so:
+120 * 1 + 0.5 * 3 = 121.5us = 0.1215ms. 12000 bits in 0.1215 is about 98.7Mbps
+c)100 * 4.7 * 10^9 bytes = 4.7 * 10^11 / 12 * 3600 = 10.8 MByte/sec approx.
+
+
+21) 21. Suppose a host has a 1-MB file that is to be sent to another host.
+The file takes 1 second of CPU time to compress 50% or 2 seconds
+to compress 60%.
+(a) Calculate the bandwidth at which each compression option
+takes the same total compression+transmission time.
+(b) Explain why latency does not affect your answer.
+
+a) We have 0.5MB/1 sec for the first case and 0.6MB/ 2 sec which is 0.3MB/sec
+b) Latency doesnt matter because it affects compressed and uncompressed equally
+
+
+24)Consider a network with a ring topology...
+
+1500 =100 * 10^6 * 1/8 * (length of circumference/2*10^8)
+
+=> length of circumference is 24000m
+
+1500 = 100 * 10^6 * 1/8 * x * (0.5us + 0.1us)
+x = 200
+Length = 200 * 100m = 20000m
+
+36) The Unix utility ping can be used to find the RTT to various
+Internet hosts. Read the man page for ping, and use it to find the
+RTT to www.cs.princeton.edu in New Jersey and www.cisco.com in
+California.Measure the RTT values at different times of day, and
+compare the results. What do you think accounts for the
+differences?
+
+cisco.com replies with around 3.1 - 3.4 ms meanwhile princeton.edu didnt reply to my pings, like it received the packets with 100% packet success (I used -c to check) but other than that then it didnt tell me the time, weird.
+
+3) 
+
+Traceroute:
+
+Okay, so I'm doing the traceroute on windows with the tracert command. 
+
+When doing the tracert to argentine news websites, packet starts at miami gets on some lightspeed.miami.fl (I'm assuming this is some sort of highway?) and from there it goes to california where it bounces at like 4 addresses and then goes to georgia. After that, I instantly appear in Argentina.
+
+Same when doing the tracert to Germany, it always goes to California after Miami, and then I end up in Germany in the Bayern region.
+
+As for North America, pretty similar thing, except that after California it sent me to an address that belongs to Teliasonera, and this iplocator i used said the location could be florida, but under it another one said Stockholm? I'm sure I did something wrong in all this but I cant figure out what.

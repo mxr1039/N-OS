@@ -1,0 +1,30 @@
+#
+#
+# Makefile to exercise Twilio
+# Author: bjr
+# Created: 04/2016
+# Last Update: -
+#
+#
+
+ACCT_SID= A....0
+AUTH_TOK= b....d
+T_URL= https://api.twilio.com/2010-04-01/Accounts
+
+TWILIO_TO=  +16093055555
+TWILIO_FRM= +13053055555
+TWILIO_MSG= Hello-world!
+
+#V= -v
+
+list:
+	curl ${V} -iX GET '${T_URL}/${ACCT_SID}/Messages' -u '${ACCT_SID}:${AUTH_TOK}'
+
+sms-out:
+	curl ${V} -X POST '${T_URL}/${ACCT_SID}/Messages.json' \
+	--data-urlencode 'To=${TWILIO_TO}'  \
+	--data-urlencode 'From=${TWILIO_FRM}'  \
+	--data-urlencode 'Body=${TWILIO_MSG}' \
+	-u '${ACCT_SID}:${AUTH_TOK}'
+
+

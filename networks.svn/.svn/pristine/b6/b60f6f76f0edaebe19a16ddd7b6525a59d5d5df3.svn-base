@@ -1,0 +1,45 @@
+
+class: csc424-162
+project: proj1
+student: frde
+date: 
+
+grade: 1/5
+
+something realistic submitted:	1/1
+partial passes basic test:		0/1
+fully passes basic test (#):	0/1
+code review($):					0/1
+passes extended test (%):		0/1
+
+lateness:			(0)/(1)
+
+
+(#)
+- make test; no binaries submitted; 
+  exactly matches reference file
+  
+($)
+- code review includes using linked list to 
+  accomplish task, malloc, correct use of C,
+  and so on
+
+(%)
+- passes four tests in Makefile.ext 
+
+
+commit:
+	r47 | frde | 2016-01-27 14:18:32 -0500 (Wed, 27 Jan 2016) | 1 line
+
+comments:
+	seg faults on test
+
+	burt@TrustyLVM:~/svn/csc424.svn/frde/proj1$ ./arrange-h-e a
+	Segmentation fault (core dumped)
+
+	uses forward declarations, and tries to simulate call by reference using
+	and double pointer (**) which is not a good way to do things. you get 
+	Segmentation faults this way.
+	
+	
+	

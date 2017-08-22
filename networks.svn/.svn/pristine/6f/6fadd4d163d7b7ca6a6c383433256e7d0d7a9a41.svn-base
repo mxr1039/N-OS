@@ -1,0 +1,43 @@
+
+
+class: csc424-162
+project: proj5
+user: francisco delger (frde)
+
+
+grade: 2/5
+
+preliminary work completed (#):	1/1
+twilio basic tests ($):			1/2
+interface quality (%):			0/2
+
+lateness (^):				(0)/(1)
+
+(#)
+- curl used to investigate, or implemented in curl
+
+  
+($)
+- Twilio send, list, get
+  Makefile parameters to allow changing SID, twilio number, etc.
+
+(%)
+- general quality of interface, uses libraries to parse
+  return data, and present data.
+  
+(^)
+- no lateness permitted
+
+commit:
+
+comments:
+	I get nothing
+		
+		./twilio -v -S AC... -T b4... -R +16093035033 send "+13053018428:Hi everyone! From fdre"
+		You have introduced the following arguments, ID is AC..., Token is b4.... , message is (null) , number is -1086834151 
+		GET request 
+		HTTP GET SUCCESS 
+
+	makefile isn't set up to test
+	
+	

@@ -1,0 +1,28 @@
+
+CSC424 Computer Networks and Security
+1 February 2016
+
+Due: 8 Feb
+
+1) Read chapters 1 and 3 from Computer Networks, Peterson and Davie 5th ed.
+   (In the 3ird edition, chapters 1 and 4). 
+
+2) Chapter 1 questions, numbers for 5th ed (4th ed):
+   * 7 (9)
+   * 8 (10)
+   * 18 (20)
+   * 21 (23)
+   * 24 (26 numbers differ)
+   * 36 (38)
+
+3) Pick out 2 servers located in each of the 3 continents: Europe, North America and
+   South America. Use traceroute to find the packet path. Then use your internet 
+   sleuthing abilities to find the actual geographic path, including if possible the
+   location, down to the address, of the major switching hubs.
+   
+   Use these resources, among others:
+   * http://www.submarinecablemap.com/
+   * http://www.teliasoneraicmap.com/
+   * http://lg.telia.net/
+   * http://www.flrnet.org/?page_id=247
+  

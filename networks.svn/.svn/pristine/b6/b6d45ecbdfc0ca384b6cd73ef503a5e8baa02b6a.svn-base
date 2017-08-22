@@ -1,0 +1,28 @@
+#
+# Name:
+# Date:
+# 
+# Note: Makefiles begin with a captal M
+#   Indentation MUST be with a tab
+#
+# tagets build, test, clean and submit are required.
+# 
+
+COPTS= 
+#COPTS= -Wall
+
+all:
+	@echo "Targets: test-ext"
+
+arrange-h-e: arrange-h-e.c arrange-h-e.h
+	cc ${COPTS} -o $@ $<
+
+test-ext: arrange-h-e
+	./arrange-h-e 
+	./arrange-h-e :::::::::::::::::
+	./arrange-h-e a
+	./arrange-h-e :a
+	./arrange-h-e a:
+	./arrange-h-e :a:
+	./arrange-h-e :a:b:
+
