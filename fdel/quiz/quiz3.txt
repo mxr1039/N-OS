@@ -1,0 +1,57 @@
+QUIZ 3
+
+Name: Francisco Delger
+Grade:
+
+Date out: Mon, 28 Nov 2016 
+Date due: Fri,  2 Dec 2016
+
+* Copy this file to your own quiz folder. 
+* Do not modify anything in the quiz folder, else subversion will stop your commits! 
+* Put your name where it says "Name".
+
+Read "The UNIX Time-Sharing System"  by Dennis Ritchie and Ken Thompson.
+	Bell System Technical Journal 57:6 July-August 1978.
+	https://archive.org/details/bstj57-6-1905
+
+	Read sections 3 and 4.
+
+
+1) The Unix systems calls try to eliminate differences between styles of accesing
+   I/O devices. What two major styles of access are mentioned?
+   
+   Two major styles are the sequential and the random access.
+
+2) In the Unix system as described, what is the only exception to the rule of identical
+   treatment for files on different file systems?
+
+   You can't have a link between two file system hierarchies.
+
+3) What are the three major categories of data in a file system (according to the
+   presentation in class)?
+
+   There is the metadata, superblock, and lastly the content.
+   
+4) What are the three kinds of files in the unix filesystem as described in the paper?
+
+   Regular files, directory files, and then special files comprise the 3 categories.
+
+5) Draw three distinctions that have practical effect between the unix filesystem
+   and FAT.
+
+   FAT has the 11 bit (8+3) file system names, which is why we need the unix_filenane and dos_filename function for minifat.c. Unix has 14.
+
+   Unix superblock has security measures that the FAT table doesn't.
+
+   Unix is case sensitive where as FAT isn't.
+   
+6) What are the two pieces of information in the file identifier in the NTFS filesystem?
+
+   There is a number of blocks and then the logical block number which helps identify.
+
+7) When does the unix filesystem reclaim the disk blocks of a file?
+
+   It happens when you delete the last copy of the directory entry of a file. The link-count decreases to 0.
+
+
+

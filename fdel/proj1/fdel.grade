@@ -1,0 +1,41 @@
+class: csc421-171
+project: proj1
+student: fdel
+date: 
+
+
+grade: 3/5
+
+passes basic test (#):		2/2
+passes extended test (%):	0/2
+submitted and style (!):	1/1
+lateness:		 	(0)/(3)
+  
+(#)
+- make test; no binaries submitted; 
+  exactly matches reference files
+
+(%)
+- passes tests in Makefile.ext 
+
+(!)
+- if basic test not past: for submitting
+  if extended test past: logic and style is acceptable
+
+
+commit:
+  # the log for the commit of graded program
+  r255 | fdel | 2016-09-18 21:54:38 -0400 (Sun, 18 Sep 2016) | 1 line
+  
+
+comments:
+  # comments on the program and grading
+  bases basic tests
+  will not pass further tests:
+    as line 67, ringbuf-sub.c, does not wrap around tail
+    
+  style:
+    line 55, ringbuf-sub.c, should use RINGBUF_SIZE, not 16. 
+
+
+

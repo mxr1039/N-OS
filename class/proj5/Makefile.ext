@@ -1,0 +1,28 @@
+
+#
+# extended tests for csc421-161 proj5
+# author: bjr
+# created: nov 2016
+# last update:
+#
+# needs scripts touch-files.sh and remove-files.sh
+# is to be run after the main makefile run target
+#
+
+MNT= mnt
+TF= ../touch-files.sh
+RF= ../remove-files.sh
+HD= hexdump -C ../vd.dmg
+HDF= hdf
+
+test:
+	cd ${MNT} ; ${TF} a 32 ; ${HD} > ../${HDF}.1  
+	cd ${MNT} ; ${TF} b 32 ; ${HD} > ../${HDF}.2
+	cd ${MNT} ; ${TF} c 32 ; ${HD} > ../${HDF}.3
+	cd ${MNT} ; ${RF} b 32 ; ${HD} > ../${HDF}.4
+	cd ${MNT} ; ${RF} c 32 ; ${HD} > ../${HDF}.5
+	echo "try rm *" 
+
+clean:
+	rm ${HDF}.1 ${HDF}.2 ${HDF}.3 ${HDF}.4 ${HDF}.5
+

@@ -1,0 +1,41 @@
+class: csc421-171
+project: proj3
+student: fdel
+date: 
+
+grade: 4/5
+
+evidence.tar (#):			1/1
+style and correctness (!):	0/1
+mysyscalls.c (%):			3/3
+lateness:				 	(0)/(3)
+  
+(#)
+- evidence.tar is present, 
+  linux/include and syscall_32 correct
+
+(%)
+- mysyscalls.c code is correct
+  uses #defines
+  returns -1 on bad opcode (not graded)
+
+(!)
+- mymonitor-sub.c code maps #defines and 
+  other #defines
+
+
+commit:
+  # the log for the commit of graded program
+  r464 | fdel | 2016-10-20 15:05:12 -0400 (Thu, 20 Oct 2016) | 1 line
+
+
+comments:
+  # comments on the program and grading
+  evidence.tar ok
+  mysyscalls.c ok
+  does not map #defines in mymonitor-sub.c
+
+  passes basic tests
+  passes extended tests
+
+   

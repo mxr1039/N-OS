@@ -1,0 +1,24 @@
+
+--This line, and those below, will be ignored--
+
+A    proj3
+A    proj3/#mymonitor-test-b.out#
+AM   proj3/Makefile
+AM   proj3/evidence.tar
+A    proj3/mymonitor-sub.c
+AM   proj3/mymonitor-sub.o
+AM   proj3/mymonitor-test-a
+A    proj3/mymonitor-test-a.c
+A    proj3/mymonitor-test-a.out
+A    proj3/mymonitor-test-a.ref
+A    proj3/mymonitor-test-b.c
+A    proj3/mymonitor-test-b.out
+A    proj3/mymonitor-test-b.ref
+AM   proj3/mymonitor-test-b1
+AM   proj3/mymonitor-test-b2
+A    proj3/mymonitor.h
+A    proj3/mysyscalls.c
+A    proj3/mysyscalls.h
+A    proj3/ringbuf.h
+A    proj3/test-commands-1.h
+A    proj3/test-commands-2.h

@@ -1,0 +1,59 @@
+./producer -vMn1 hello.world & ./consumer -vMn1 & ./consumer -vMn1 & wait
+We are in message mode 
+Entered consumer monitor... 
+I'm checking if len greater than size
+Discarded elements, too large...
+I'm waiting because the consumer is empty...
+Dequeuing: h 
+Dequeuing: e 
+Dequeuing: l 
+Dequeuing: l 
+Dequeuing: o 
+Completed consuming 
+We are in message mode 
+Entered consumer monitor... 
+I'm checking if len greater than size
+Discarded elements, too large...
+I'm waiting because the consumer is empty...
+Dequeuing: w 
+Dequeuing: o 
+Dequeuing: r 
+Dequeuing: l 
+Dequeuing: d 
+Completed consuming 
+I entered the monitor produce side
+I'm checking for size in producer..
+Checking if it's full... 
+enqueuing: h
+I'm checking for size in producer..
+Checking if it's full... 
+enqueuing: e
+I'm checking for size in producer..
+Checking if it's full... 
+enqueuing: l
+I'm checking for size in producer..
+Checking if it's full... 
+enqueuing: l
+I'm checking for size in producer..
+Checking if it's full... 
+enqueuing: o
+Completed producing
+token second round is world
+len second round is 5 
+I entered the monitor produce side
+I'm checking for size in producer..
+Checking if it's full... 
+enqueuing: w
+I'm checking for size in producer..
+Checking if it's full... 
+enqueuing: o
+I'm checking for size in producer..
+Checking if it's full... 
+enqueuing: r
+I'm checking for size in producer..
+Checking if it's full... 
+enqueuing: l
+I'm checking for size in producer..
+Checking if it's full... 
+enqueuing: d
+Completed producing

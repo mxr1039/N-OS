@@ -1,0 +1,44 @@
+QUIZ 1
+
+Name:
+Grade:
+
+Date out: Fri, 9 sep 2016 
+Date due: Wed, 14 sep 2016
+
+* Copy this file to your own quiz folder. 
+* Do not modify anything in the quiz folder, else subversion will stop your commits! 
+* Put your name where it says "Name".
+
+
+The three files m.c, s.c and s.h have been provided for you in a subdirectory
+called q1-files. 
+
+1) Write a Makefile with these targets:
+
+   * m -     This target creates executable m from sources m.c, s.h and compiled s.o.
+             It builds s.o if necessary.
+   * s.o -   This target creates compiled s.o from sources s.c and s.h.
+   * run -   This target runs ./m 83. It builds m if necessary.
+   * clean - This target rm's all build products.
+
+Target run is the default target.
+
+All dependencies must work. For instance:
+
+   * "touch s.o" should rebuild m on either make m or make run.
+   * "touch s.c" should rebuild s.o and m on any of - make m, make s.o or make run.
+   * "make clean ; make" should build m and run it on input 83.
+   
+Submit the Makefile as quiz/q1-files/Makefile.
+
+2) What does the program print, and why?
+
+      #include<stdio.h>
+      int main(int argc, char * argv[]){
+         printf("%d, %d\n", (int)(signed char) -1, (int)(unsigned char) -1) ;
+         printf("%d, %d\n", (int)(signed char) 255, (int)(unsigned char) 255) ;
+         return 0 ; 
+      }
+      
+

@@ -1,0 +1,39 @@
+QUIZ 3
+
+Name:
+Grade:
+
+Date out: Mon, 28 Nov 2016 
+Date due: Fri,  2 Dec 2016
+
+* Copy this file to your own quiz folder. 
+* Do not modify anything in the quiz folder, else subversion will stop your commits! 
+* Put your name where it says "Name".
+
+Read "The UNIX Time-Sharing System"  by Dennis Ritchie and Ken Thompson.
+	Bell System Technical Journal 57:6 July-August 1978.
+	https://archive.org/details/bstj57-6-1905
+
+	Read sections 3 and 4.
+
+
+1) The Unix systems calls try to eliminate differences between styles of accesing
+   I/O devices. What two major styles of access are mentioned?
+
+2) In the Unix system as described, what is the only exception to the rule of identical
+   treatment for files on different file systems?
+
+3) What are the three major categories of data in a file system (according to the
+   presentation in class)?
+   
+4) What are the three kinds of files in the unix filesystem as described in the paper?
+   
+5) Draw three distinctions that have practical effect between the unix filesystem
+   and FAT.
+   
+6) What are the two pieces of information in the file identifier in the NTFS filesystem?
+
+7) When does the unix filesystem reclaim the disk blocks of a file?
+
+
+

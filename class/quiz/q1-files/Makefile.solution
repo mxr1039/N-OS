@@ -1,0 +1,35 @@
+
+#
+#
+# name: burt
+# date: 21 sep 2016
+#
+# a sample solution
+
+# same runs:
+
+# Matawan:q1-files ojo$ make -f Makefile.solution run
+# make -f Makefile.solution run
+# cc -o s.o -c s.c
+# cc -o m m.c s.o
+# ./m 83
+# 166
+# Matawan:q1-files ojo$ touch m.c
+# Matawan:q1-files ojo$ make -f Makefile.solution run
+# cc -o m m.c s.o
+# ./m 83
+# 166
+
+
+m: m.c s.h s.o
+	cc -o m m.c s.o
+
+s.o: s.c s.h
+	cc -o s.o -c s.c
+
+run: m
+	./m 83
+
+clean:
+	-rm s.o m
+

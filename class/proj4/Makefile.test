@@ -1,0 +1,54 @@
+#
+# proj4 makefile
+# producer consumer project
+# csc421-171, oct 2016
+#
+
+KHR=/usr/src/linux-source-4.4.0
+LS=linux-source-4.4.0
+THIS= -f Makefile.test
+
+all:
+	make producer
+	make consumer
+	
+producer: producer.c pc-monitor.o pc-monitor.h
+	cc ${COPTS} -o $@ $< pc-monitor.o
+	
+consumer: consumer.c pc-monitor.o pc-monitor.h
+	cc ${COPTS} -o $@ $< pc-monitor.o
+	
+pc-monitor.o: pc-monitor.c pc-monitor.h
+	cc ${COPTS} -c -o $@ $<
+
+
+test: producer consumer
+	-rm test1.run test2.run test3.run test4.run test5.run
+	make ${THIS} test1
+	make ${THIS} test2
+	make ${THIS} test3
+	make ${THIS} test4
+	make ${THIS} test5
+
+test1: producer consumer
+	(./producer -n 1 a & ./consumer -n 1 & wait) > test1.run
+
+test2: producer consumer
+	(./producer -n1 abc & ./consumer -n3 & wait) > test2.run
+	(./producer -n1 abc & ./consumer -n1 & ./consumer -n1 & ./consumer -n1 & wait ) >> test2.run
+
+test3: producer consumer
+	(./producer -n1 -M hello & ./consumer -n1 -M & wait) > test3.run
+
+test4: producer consumer
+	(./producer -n1 -M hello.world & ./consumer -n2 -M & wait) > test4.run
+
+test5: producer consumer
+	(./producer -Mn1 hello.world & ./consumer -Mn1 & ./consumer -Mn1 & wait) > test5.run
+
+clean:
+	-rm pc-monitor.o producer consumer
+
+submit:
+	svn commit -m "submitted for grading"
+

@@ -1,0 +1,37 @@
+class: csc421-171
+project: proj5
+student: fdel
+date: 
+
+grade: 1/5
+
+(#):		1/1
+(!):		0/2
+($):		0/2
+lateness:			 	(2)/(3)
+
+(#)
+- touch test run, does not need to pass
+- test is: 
+     make ; make run ; cd mnt ; touch a ; ls -la
+  
+(!)
+- basic tests, does not need to pass fully
+
+($)
+- Makefile.ext checking for:
+-   filename correctly encoded as 8+3
+-   can add and remove
+-   root diretory size is correct
+-   check block chaining
+-   check that directory extends and truncates properly
+
+commit:
+  # the log for the commit of graded program
+  r1062 | fdel | 2016-11-25 19:39:53 -0500 (Fri, 25 Nov 2016) | 1 line
+  r1215 | fdel | 2016-12-08 11:34:04 -0500 (Thu, 08 Dec 2016) | 1 line
+
+comments:
+  # comments on the program and grading
+  does not compile
+

@@ -1,0 +1,37 @@
+QUIZ 2
+
+Name:
+Grade:
+
+Date out: Mon, 10 oct 2016 
+Date due: Fri, 14 oct 2016
+
+* Copy this file to your own quiz folder. 
+* Do not modify anything in the quiz folder, else subversion will stop your commits! 
+* Put your name where it says "Name".
+
+Read "The UNIX Time-Sharing System"  by Dennis Ritchie and Ken Thompson.
+	Bell System Technical Journal 57:6 July-August 1978.
+	https://archive.org/details/bstj57-6-1905
+
+	You can skip sections 3 and 4.
+
+
+1) When was Unix rewritten in C
+
+2) Find images on the internet of the PDP11/20 computer.
+   a- What colors were the switches on the front panel of the PDP11/20?
+   b- Why are the colors on the switches arranged in groups of 3?
+   c- What is the size of the address space of the PDP11/20?
+
+3) Unix virtual memory has three logical segments, what are they? 
+   State the relative range of addresses for each sgment, the purpose, and 
+   any read/write and sharing protections.
+   
+4) What is the PID of the unique unix process with no parent process.
+   
+5) a- What synchronization mechanism is used by the shell when executing commands,
+   to coordinate access to the terminal. 
+   b- How is that does the "&" symbol ending a command line modify the use of that
+   mechanism.
+

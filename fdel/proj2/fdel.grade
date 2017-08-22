@@ -1,0 +1,32 @@
+class: csc421-171
+project: proj2
+student: fdel
+date: 
+
+grade: 5/5
+
+passes basic test (#):		3/3
+passes extended test (%):	1/1
+submitted and style (!):	1/1
+lateness:		 	(0)/(3)
+  
+(#)
+- make test, evidence.tar is present; 
+
+(%)
+- passes test-mysyslog and test-ringbuf 
+
+(!)
+- if basic test not past: for submitting
+  if extended test past: logic and style is acceptable
+
+commit:
+  # the log for the commit of graded program
+  r345 | fdel | 2016-10-02 21:29:43 -0400 (Sun, 02 Oct 2016) | 1 line 
+
+comments:
+  # comments on the program and grading
+  passes basic tests
+  passes extended tests
+
+

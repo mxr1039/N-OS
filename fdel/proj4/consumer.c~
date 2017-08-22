@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<unistd.h>
+#include<assert.h>
+#include<sys/wait.h>
+
+#include "pc-monitor.h"
+
+/*
+ * consumer template 
+ * author:francisco delger
+ * created:
+ * lastupdate:
+ */
+
+#define USAGE_MESSAGE "usage: consumer [-vM] [-r _num_] [-n _num_]"
+#define REPEAT_TIME_DEFAULT 1
+
+int is_verbose = 0 ;
+
+int main( int argc, char * argv[]) {
+	int ch ;
+	int repeat = REPEAT_TIME_DEFAULT ;
+	int is_mm = 0 ;
+	int sleep = 0;
+	int len = 0;
+	
+	/* usual getopt stuff */
+	while ((ch = getopt(argc, argv, "vMn:r:")) != -1) {
+		switch(ch) {
+		case 'r':
+		        sleep = atoi(optarg);
+			break ;
+		case 'M':
+		        is_mm = 1;
+			break ;
+		case 'v':
+		        is_verbose = 1;
+			break ;
+		case 'n':
+		        repeat = atoi(optarg);
+			break;
+		default:
+			printf("%s\n",USAGE_MESSAGE) ;
+			return 0 ;
+		}
+	}
+	argc -= optind;
+	argv += optind;
+
+	consume(NULL,0);
+	
+	return 0 ;
+}

@@ -1,0 +1,75 @@
+cc minifat.c `pkg-config fuse --cflags --libs` -o minifat dos_filenames.o
+minifat.c: In function ‘mf_getattr’:
+minifat.c:205:24: warning: passing argument 1 of ‘dos_filename’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+    path = dos_filename(path);
+                        ^
+minifat.c:50:8: note: expected ‘char *’ but argument is of type ‘const char *’
+ char * dos_filename(char * name) {
+        ^
+minifat.c:206:28: warning: passing argument 1 of ‘find_file_dent’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+    dirent = find_file_dent(path, ROOT_DIR_CLUSTER);
+                            ^
+minifat.c:111:17: note: expected ‘char *’ but argument is of type ‘const char *’
+ struct Dirent * find_file_dent(char * dos_name, int clust) {
+                 ^
+minifat.c: In function ‘mf_mkdir’:
+minifat.c:264:23: warning: passing argument 1 of ‘dos_filename’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   path = dos_filename(path);
+                       ^
+minifat.c:50:8: note: expected ‘char *’ but argument is of type ‘const char *’
+ char * dos_filename(char * name) {
+        ^
+minifat.c:265:27: warning: passing argument 1 of ‘find_file_dent’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   dirent = find_file_dent(path, ROOT_DIR_CLUSTER);
+                           ^
+minifat.c:111:17: note: expected ‘char *’ but argument is of type ‘const char *’
+ struct Dirent * find_file_dent(char * dos_name, int clust) {
+                 ^
+minifat.c:283:10: error: ‘SIFDIR’ undeclared (first use in this function)
+   mode = SIFDIR | 0777;
+          ^
+minifat.c:283:10: note: each undeclared identifier is reported only once for each function it appears in
+minifat.c: In function ‘mf_rmdir’:
+minifat.c:292:23: warning: passing argument 1 of ‘dos_filename’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   path = dos_filename(path);
+                       ^
+minifat.c:50:8: note: expected ‘char *’ but argument is of type ‘const char *’
+ char * dos_filename(char * name) {
+        ^
+minifat.c:293:27: warning: passing argument 1 of ‘find_file_dent’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   dirent = find_file_dent(path, ROOT_DIR_CLUSTER);
+                           ^
+minifat.c:111:17: note: expected ‘char *’ but argument is of type ‘const char *’
+ struct Dirent * find_file_dent(char * dos_name, int clust) {
+                 ^
+minifat.c:300:2: warning: null argument where non-null required (argument 2) [-Wnonnull]
+  strcpy(i_dent->dir_name, '\0');
+  ^
+minifat.c: In function ‘mf_unlink’:
+minifat.c:332:22: warning: passing argument 1 of ‘dos_filename’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  path = dos_filename(path);
+                      ^
+minifat.c:50:8: note: expected ‘char *’ but argument is of type ‘const char *’
+ char * dos_filename(char * name) {
+        ^
+minifat.c:333:26: warning: passing argument 1 of ‘find_file_dent’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  dirent = find_file_dent(path, ROOT_DIR_CLUSTER);
+                          ^
+minifat.c:111:17: note: expected ‘char *’ but argument is of type ‘const char *’
+ struct Dirent * find_file_dent(char * dos_name, int clust) {
+                 ^
+minifat.c: In function ‘mf_create’:
+minifat.c:359:22: warning: passing argument 1 of ‘dos_filename’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  path = dos_filename(path);
+                      ^
+minifat.c:50:8: note: expected ‘char *’ but argument is of type ‘const char *’
+ char * dos_filename(char * name) {
+        ^
+minifat.c:364:26: warning: passing argument 1 of ‘find_file_dent’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  dirent = find_file_dent(path, ROOT_DIR_CLUSTER);
+                          ^
+minifat.c:111:17: note: expected ‘char *’ but argument is of type ‘const char *’
+ struct Dirent * find_file_dent(char * dos_name, int clust) {
+                 ^
+Makefile:12: recipe for target 'minifat' failed
+make: *** [minifat] Error 1

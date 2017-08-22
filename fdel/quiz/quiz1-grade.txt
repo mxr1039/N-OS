@@ -1,0 +1,28 @@
+class: csc421-171
+quiz: proj0
+student: fdel
+date: 
+
+grade: 3/4
+
+submitted program, makefile($):	1/1
+passes basic test ($):		1/1
+answer the question (%):	1/1
+provide correct answer (%):	0/1	 	
+
+($)
+- program submitted, name and date in (1)
+  program, make works, program compiles (1)
+
+(%)
+- provide an explanation  (1) 
+  provide a correct answer (1)
+
+comments:
+  # comments on the program and grading
+	Make file submitted & runs
+	Note : Default rule is missiong 
+	Explanation of second question is confusing
+
+	Makefile does not remove s.o.
+  

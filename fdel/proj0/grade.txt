@@ -1,0 +1,60 @@
+class: csc421-171
+project: proj0
+student: fdel
+date: 
+
+grade: 4/5
+
+submitted program, makefile($):	1/1
+passes basic test (#):		2/2
+passes extended test (%):	1/2
+lateness:		 	(0)/(1)
+
+($)
+- program submitted, name and date in 
+  program, make works, program compiles
+
+(#)
+- make test; no binaries submitted; 
+  exactly matches boom.ref
+  partial credit (1pt) if does not completely 
+  match output
+
+(%)
+- passes tests in Makefile.ext 
+- only source submitted (not boom or boom.out) 
+
+commit:
+  # the log for the commit of graded program
+  r107 | fdel | 2016-09-04 17:35:29 -0400 (Sun, 04 Sep 2016) | 1 line
+
+comments:
+  # comments on the program and grading
+  passes basic tests
+  partial passes extended tests (-1)
+    
+		./boom -u -n 1
+		make[1]: *** [test-ext] Segmentation fault: 11
+		./boom -n 1 -u
+		make[1]: *** [test-ext] Segmentation fault: 11
+
+  line 67: 	count_to = atoi(*argv) ;
+  how do you know *argv exists? 
+  if (argc!=1) { /* print usage and exit */ return 0; } // needed
+  
+  these lines:
+  
+  	    if ( j + n > counting_up) {
+      	      j = counting_up;
+	    }
+	      
+	    if ( j == counting_up) {
+	      
+	      printf("Boom!\n");
+	    }
+	    
+	can be compressed to:
+	
+		if ( (j+n) >= counting_up ) { printf("Boom!\n") ; }
+		
+  

@@ -1,0 +1,2 @@
+./producer -vn1 -M hello.world & ./consumer -vn2 -M & wait
+Makefile:35: recipe for target 'test4' failed

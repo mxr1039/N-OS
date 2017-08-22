@@ -1,0 +1,49 @@
+QUIZ 1
+
+Name:
+Grade:
+
+Date out: Fri, 9 sep 2015 
+Date due: Wed, 14 sep 2015
+
+* Copy this file to your own quiz folder. 
+* Do not modify anything in the quiz folder, else subversion will stop your commits! 
+* Put your name where it says "Name".
+
+
+The three files m.c, s.c and s.h have been provided for you in a subdirectory
+called q1-files. 
+
+1) Write a Makefile with these targets:
+
+   * m -     This target creates executable m from sources m.c, s.h and compiled s.o.
+             It builds s.o if necessary.
+   * s.o -   This target creates compiled s.o from sources s.c and s.h.
+   * run -   This target runs ./m 83. It builds m if necessary.
+   * clean - This target rm's all build products.
+
+Target run is the default target.
+
+All dependencies must work. For instance:
+
+   * "touch s.o" should rebuild m on either make m or make run.
+   * "touch s.c" should rebuild s.o and m on any of - make m, make s.o or make run.
+   * "make clean ; make" should build m and run it on input 83.
+   
+Submit the Makefile as quiz/q1-files/Makefile.
+
+2) What does the program print, and why?
+
+      #include<stdio.h>
+      int main(int argc, char * argv[]){
+         printf("%d, %d\n", (int)(signed char) -1, (int)(unsigned char) -1) ;
+         printf("%d, %d\n", (int)(signed char) 255, (int)(unsigned char) 255) ;
+         return 0 ; 
+      }
+      
+Signed characters prints negative numbers and positive numbers, and goes from -128 to 127. This is why the first -1 is print out correctly.
+
+Unsigned characters go from 0 to 255 and this is why the unsigned 255 prints out correctly.
+
+As for the signed 255 and unsigned -1, which both fall out of range, are converted to the equivalent two's complement. The two's complement of signed -1 and unsigned 255 (not how now they are in the appropiate range, is identical. This is why they are printed out in a sort of inverse way in the program.)
+ 
